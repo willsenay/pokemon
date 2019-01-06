@@ -1,0 +1,7 @@
+,index,Name,#,Type 1,Type 2,Total,HP,Attack,Generation,Legendary,Stat,Stat_Name
+0,0,Bulbasaur,1,Grass,Poison,94,45,0,1,False,45,HP
+1,0,Bulbasaur,1,Grass,Poison,94,0,49,1,False,49,Attack
+2,1,Ivysaur,2,Grass,Poison,122,60,0,1,False,60,HP
+3,1,Ivysaur,2,Grass,Poison,122,0,62,1,False,62,Attack
+4,2,Venusaur,3,Grass,Poison,162,80,0,1,False,80,HP
+5,2,Venusaur,3,Grass,Poison,162,0,82,1,False,82,Attack

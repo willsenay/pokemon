@@ -13,16 +13,29 @@
 //   myChart.draw();
 // });
 
-var svg = dimple.newSvg("#chartContainer", 10500, 400);
+var svg = dimple.newSvg("#chartContainer", 8050, 400);
 
-d3.csv("../data/stats_clean.csv", function (data) {
+d3.csv("../data/gen1.csv", function (data) {
   var myChart = new dimple.chart(svg, data);
-  myChart.setBounds(60, 30, 10000, 305)
+  myChart.setBounds(60, 30, 8000, 305)
   var x = myChart.addCategoryAxis("x", "Name");
-  x.addOrderRule(''); // order by index
+  x.addOrderRule('Total', desc=true);
   myChart.addMeasureAxis("y", "Total");
-  var flter = myChart.addSeries("Generation", dimple.plot.bar);
-  flter.addOrderRule("Generation", desc=true);
+  myChart.addSeries("Generation", dimple.plot.bar);
   myChart.addLegend(60, 10, 510, 20, "right");
   myChart.draw();
 });
+
+
+// var svg = dimple.newSvg("#chartContainer", 1050, 400);
+
+// d3.csv("../data/test.csv", function (data) {
+//   var myChart = new dimple.chart(svg, data);
+//   myChart.setBounds(60, 30, 1000, 305)
+//   var x = myChart.addCategoryAxis("x", "Name");
+//   x.addOrderRule(''); // order by index
+//   myChart.addMeasureAxis("y", "Stat");
+//   myChart.addSeries("Stat_Name", dimple.plot.bar);
+//   myChart.addLegend(60, 10, 510, 20, "right");
+//   myChart.draw();
+// });
