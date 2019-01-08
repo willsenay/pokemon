@@ -27,12 +27,13 @@ d3.csv("../data/gen1.csv", function(error, pokeData){
       .selectAll("tr")
       .append("td")
       .attr("class", "text-center align-middle")
+      .append("button")
       .attr("id", "pokeName");
 
-    names.forEach(function(d){
+    pokeData.forEach(function(d){
         d3.select("#pokeName")
-          .attr("id", null)
-          .text(d);
+          .attr("id", "click"+d.ID)
+          .text(d.Name);
     });
 
     d3.select("body")
@@ -52,4 +53,19 @@ d3.csv("../data/gen1.csv", function(error, pokeData){
 
 });
 
+// function myFunction() {
+//   alert ("Hello World!");
+// } 
+
+var button = d3.select("#click1");
+
+function handleClick(){
+  console.log("button clicked");
+};
+
+button.on("click", handleClick);
+
+button.on("click", function(){
+  console.log("sah");
+});
 

@@ -1,25 +1,42 @@
-// Define SVG area dimensions
-var svgWidth = 500;
-var svgHeight = 255;
+d3.csv("../data/gen1.csv", function(error, pokeData){
+    if (error) return console.warn(error);
 
-// Define the chart's margins as an object
-var svg = d3.select("body")
-    .append("svg")
-    .attr("width", svgWidth)
-    .attr("height", svgHeight)
-    .attr("class", "bar-chart");
+    console.table(pokeData.slice(0,5));
+    console.log(pokeData);
 
-d3.csv("../data/gen1.csv", function(error,Data) {
-    if (error) throw error;
 
-    console.log(Data);
 
-    Data.forEach(function(d){
-        d.Attack = +d.Attack
-        d.Defense = +d.Defense
-        d.HP = +d.HP
-        d.Sp_Atk = +d.Sp_Atk
-        d.Sp_Def = +d.Sp_Def
-        d.Speed = +d.Speed
-    })
-})
+});
+
+
+
+
+function createChart() {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'radar',
+    
+        // The data for our dataset
+        data: {
+            labels: ["HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense", "Speed"],
+            datasets: [{
+                label: "Base Stat Value",
+                borderColor: 'rgb(0, 0, 0)',
+                backgroundColor: 'rgb(0, 0, 0, .5)',
+                data: [45, 49, 49, 65, 65, 45],
+            }]
+        },
+    
+        // Configuration options go here
+        options: {
+            scale: {
+                ticks: {
+                    min: 1,
+                    max: 255
+                }
+            }
+        }
+    });
+};
+
