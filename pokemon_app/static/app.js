@@ -7,7 +7,7 @@ function totalStats(){
 
   $("#svgId").empty();
 
-  d3.json("/gen1api", function (data) {
+  d3.json("/poke-api", function (data) {
     var myChart = new dimple.chart(svg, data);
     myChart.setBounds(60, 30, 8000, 305)
     var x = myChart.addCategoryAxis("x", "Name");
@@ -23,7 +23,7 @@ function attackStats(){
 
   $("#svgId").empty();
 
-  d3.json("/gen1api", function (data) {
+  d3.json("/poke-api", function (data) {
     var myChart = new dimple.chart(svg, data);
     myChart.setBounds(60, 30, 8000, 305)
     var x = myChart.addCategoryAxis("x", "Name");
@@ -39,7 +39,7 @@ function defenseStats(){
 
   $("#svgId").empty();
 
-  d3.json("/gen1api", function (data) {
+  d3.json("/poke-api", function (data) {
     var myChart = new dimple.chart(svg, data);
     myChart.setBounds(60, 30, 8000, 305)
     var x = myChart.addCategoryAxis("x", "Name");
@@ -55,7 +55,7 @@ function hpStats(){
 
   $("#svgId").empty();
 
-  d3.json("/gen1api", function (data) {
+  d3.json("/poke-api", function (data) {
     var myChart = new dimple.chart(svg, data);
     myChart.setBounds(60, 30, 8000, 305)
     var x = myChart.addCategoryAxis("x", "Name");
@@ -71,7 +71,7 @@ function speedStats(){
 
   $("#svgId").empty();
 
-  d3.json("/gen1api", function (data) {
+  d3.json("/poke-api", function (data) {
     var myChart = new dimple.chart(svg, data);
     myChart.setBounds(60, 30, 8000, 305)
     var x = myChart.addCategoryAxis("x", "Name");
@@ -87,7 +87,7 @@ function spAttackStats(){
 
   $("#svgId").empty();
 
-  d3.json("/gen1api", function (data) {
+  d3.json("/poke-api", function (data) {
     var myChart = new dimple.chart(svg, data);
     myChart.setBounds(60, 30, 8000, 305)
     var x = myChart.addCategoryAxis("x", "Name");
@@ -103,7 +103,7 @@ function spDefenseStats(){
 
   $("#svgId").empty();
 
-  d3.json("/gen1api", function (data) {
+  d3.json("/poke-api", function (data) {
     var myChart = new dimple.chart(svg, data);
     myChart.setBounds(60, 30, 8000, 305)
     var x = myChart.addCategoryAxis("x", "Name");

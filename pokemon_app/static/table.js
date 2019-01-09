@@ -1,4 +1,4 @@
-d3.json("/gen1api", function(error, pokeData){
+d3.json("/poke-api", function(error, pokeData){
    
   if (error) return console.warn(error);
 
