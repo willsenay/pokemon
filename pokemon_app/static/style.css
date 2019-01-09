@@ -45,3 +45,7 @@
 .buttonRow {
     padding-bottom: 5%;
 }
+
+td {
+    border: 1px solid #000000;
+}
