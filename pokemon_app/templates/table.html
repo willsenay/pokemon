@@ -13,6 +13,7 @@
     <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
 <body style="background-color: rgb(255, 249, 226)">
     <div class="container">
@@ -22,6 +23,7 @@
                     <th>Image</th>
                     <th>Name</th>
                     <th>Pokemon ID</th>
+                    <th>Base Stats</th>
                 </tr>    
             </thead>
 
@@ -33,14 +35,6 @@
     
 
     <script src="{{ url_for('static', filename='table.js') }}"></script>
-    <script src=”//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js”></script>
-    <script src=”//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js”></script>
 </body>
-
-<script>
-    $(document).ready(
-        $('#myTable').dataTable()
-    );
-</script>
 
 </html>

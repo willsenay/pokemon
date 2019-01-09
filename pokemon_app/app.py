@@ -22,7 +22,7 @@ def home():
 def pokeapi():
 
     df = pd.read_csv("gen1.csv")
-    df = df[["Name", "Total", "HP", "Attack", "Defense", "Sp_Atk", "Sp_Def", "Speed", "ID"]]
+    df = df[["Name", "Total", "HP", "Attack", "Defense", "Sp_Atk", "Sp_Def", "Speed", "ID", "Type 1", "Type 2"]]
     dfdict = df.to_dict(orient="record")
 
     return jsonify(dfdict)
