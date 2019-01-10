@@ -54,40 +54,7 @@ function makeDataTable(){
       d3.select("#pokeID")
       .attr("id", null)
       .text(d.ID);
-    }); 
-    
-    // Type 1 ------------------------------------
-    d3.select("body")
-      .select("div")
-      .select("table")
-      .select("tbody")
-      .selectAll("tr")
-      .append("td")
-      .attr("class", "text-center align-middle")
-      .attr("id", "pokeType1");
-    
-      pokeData.forEach(function(d){
-      d3.select("#pokeType1")
-        .attr("id", null)
-        .text(d.Type1);
-      }); 
-
-      // Type 2 ------------------------------------
-
-      d3.select("body")
-      .select("div")
-      .select("table")
-      .select("tbody")
-      .selectAll("tr")
-      .append("td")
-      .attr("class", "text-center align-middle")
-      .attr("id", "pokeType2");
-    
-      pokeData.forEach(function(d){
-      d3.select("#pokeType2")
-        .attr("id", null)
-        .text(d.Type2);
-  });  
+    });     
   
     // RADAR -----------------------------------
     d3.select("body")
