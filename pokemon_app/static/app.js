@@ -115,8 +115,4 @@ function spDefenseStats(){
 }
 
 // run total stats as default graph --------
-function init(){
-  totalStats();
-};
-
-init();
+totalStats();

@@ -1,3 +1,15 @@
+// d3.csv("../data/gen1.csv", function(error, pokeData){
+//     if (error) return console.warn(error);
+
+//     console.table(pokeData.slice(0,5));
+//     console.log(pokeData);
+
+
+
+// });
+
+
+
 
 function createChart() {
     var ctx = document.getElementById('myChart').getContext('2d');
