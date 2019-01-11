@@ -14,12 +14,26 @@
     <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
 </head>
 <body style="background-color: rgb(255, 249, 226)">
-    
         
     <div class="container">
         <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <li><a class="active" href="../">Home</a></li>
+                    <li><a href="table">PokeTable</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row paddingBottom paddingTop">
             <div class="col-md-12 text-center">
                 <img src="{{ url_for('static', filename='imgs/pokemon-logo.png') }}">
+            </div>
+        </div>
+
+        <div class="row paddingBottom">
+            <div class="col-md-12 text-center">
+                <img src="{{ url_for('static', filename='imgs/pokemon-team.png') }}">
             </div>
         </div>
         
@@ -41,7 +55,7 @@
         
         </div>
         
-        <div class="row buttonRow">
+        <div class="row paddingBottom">
             <div class="col-md-12 text-center">
                 <input id="clickMe" class="button" type="button" value="Total" onclick="totalStats();" />
                 <input id="clickMe" class="button" type="button" value="HP" onclick="hpStats();" />

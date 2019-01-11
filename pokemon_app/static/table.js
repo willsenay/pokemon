@@ -63,7 +63,7 @@ function makeDataTable(){
     
     pokeData.forEach(function(d){
       d3.select("#pokeType1")
-        .attr("id", null)
+        .attr("id", d.Type_1)
         .text(d.Type_1);
     }); 
 
@@ -79,7 +79,7 @@ function makeDataTable(){
     
     pokeData.forEach(function(d){
       d3.select("#pokeType2")
-        .attr("id", null)
+        .attr("id", d.Type_2)
         .text(d.Type_2);
     }); 
   
